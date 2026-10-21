@@ -1,0 +1,34 @@
+import streamlit as st
+
+st.title("🎮 Game Quiz của Vy")
+st.write("Trả lời câu hỏi để ghi điểm nhé!")
+
+if "score" not in st.session_state:
+    st.session_state.score = 0
+if "done" not in st.session_state:
+    st.session_state.done = False
+
+st.write("Python là gì?")
+
+answer = st.radio(
+    "Chọn đáp án:",
+    ["Ngôn ngữ lập trình", "Máy tính", "Trò chơi"]
+)
+
+if st.button("Trả lời") and not st.session_state.done:
+    st.session_state.done = True
+    if answer == "Ngôn ngữ lập trình":
+        st.session_state.score += 1
+
+if st.session_state.done:
+    if answer == "Ngôn ngữ lập trình":
+        st.success("Đúng rồi! +1 điểm")
+    else:
+        st.error("Sai rồi!")
+
+    st.write("Điểm:", st.session_state.score)
+
+    if st.button("Chơi lại"):
+        st.session_state.score = 0
+        st.session_state.done = False
+        st.rerun()
