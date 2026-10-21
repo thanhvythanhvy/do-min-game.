@@ -12,8 +12,8 @@ st.set_page_config(
     layout="centered"
 )
 
-ROWS = 8
-COLS = 8
+ROWS = 9
+COLS = 9
 MINE_COUNT = 10
 
 # =========================
