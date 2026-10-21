@@ -19,19 +19,21 @@ MINE_COUNT = 10
 # =========================
 # GIAO DIEN MINESWEEPER
 # =========================
+
 st.markdown("""
 <style>
 .stApp {
-    background: #e9edf2;
+    background: #20242b;
+    color: #e2e6ed;
 }
 .block-container {
-    max-width: 500px;
-    padding: 1rem 0.35rem 2rem;
+    max-width: 390px;
+    padding: 1rem 0.3rem;
 }
 h1 {
     text-align: center;
-    color: #26364b;
-    font-size: 28px !important;
+    color: #e2e6ed;
+    font-size: 25px !important;
 }
 [data-testid="stHorizontalBlock"] {
     gap: 2px !important;
@@ -46,31 +48,40 @@ h1 {
 [data-testid="stButton"] button {
     width: 100%;
     aspect-ratio: 1 / 1;
-    min-height: 0;
-    height: auto;
-    padding: 0;
-    border-radius: 0;
-    border: 2px outset #ffffff;
-    background: #b9c5d3;
-    color: #26364b;
-    font-size: clamp(12px, 4vw, 22px);
-    font-weight: 900;
-    line-height: 1;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+    border-radius: 2px !important;
+    border: 2px outset #68717d !important;
+    background: #424b58 !important;
+    color: #dfe6ef !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
 }
 [data-testid="stButton"] button:disabled {
-    opacity: 1;
-    border: 1px solid #c4cbd3;
-    background: #d9dee5;
-    color: #26364b;
+    opacity: 1 !important;
+    border: 1px solid #353b45 !important;
+    background: #292e36 !important;
+    color: #dfe6ef !important;
 }
 [data-testid="stButton"] button:hover:not(:disabled) {
-    background: #d0dbea;
-    color: #172b48;
+    background: #515d6b !important;
+    color: white !important;
+}
+[data-testid="stMetric"] {
+    background: #292e36;
+    padding: 8px;
+    border-radius: 6px;
+}
+[data-testid="stMetricValue"] {
+    color: #e2e6ed;
+    font-size: 20px !important;
 }
 div[data-testid="stCheckbox"] {
-    background: #ffffff;
+    background: #292e36;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 </style>
 """, unsafe_allow_html=True)
